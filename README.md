@@ -1,12 +1,1 @@
----
-title: asokan
-emoji: 🐳
-colorFrom: purple
-colorTo: purple
-sdk: static
-pinned: false
-tags:
-  - deepsite
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+   This site is a professional landing page for M. Asokan, an LIC Insurance Advisor based in Chennai. It provides information about LIC insurance services, policy help, and financial guidance in both English and Tamil. The site features sections for services, policy servicing assistance, financial guidance, contact details, and a WhatsApp floating button for easy communication. It is designed with a modern, responsive layout using Tailwind CSS and includes interactive elements such as animated number counters and a language switcher. The site aims to help users understand LIC offerings and easily get in touch for free policy support or financial advice.
