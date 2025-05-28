@@ -6,22 +6,9 @@
     <title>M. Asokan - LIC Insurance Advisor Chennai | Policy Help & Financial Guidance</title>
     <meta name="description" content="Professional LIC insurance advisor in Chennai offering policy servicing, financial planning, and expert advice in English and Tamil. Free consultation available.">
     <meta name="keywords" content="LIC Advisor Chennai, LIC Agent, Insurance Policy Help, Tamil LIC Consultant, Financial Planning Chennai">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        licBlue: '#0056b3',
-                        licGold: '#FFD700',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="style.css">
     <style>
         .tamil-font {
             font-family: 'Latha', 'Lucida Grande', serif;
@@ -47,525 +34,424 @@
             right: 30px;
             z-index: 100;
         }
+        /* Header Styles */
+        .header {
+            background-color: #0056b3;
+            color: white;
+            padding: 8rem;
+            text-align: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+        .cta-group {
+            margin-top: 0.5rem;
+        }
+        .cta-btn {
+            background-color: #eab308;
+            color: #222;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        /* Navigation Styles */
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        /* Section Title Styles */
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin: 2rem 0 1rem 0;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(to right, transparent, #eab308, transparent);
+        }
+        /* Bento Grid Styles */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem 0;
+        }
+        .bento-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+        }
+        .icon {
+            font-size: 2rem;
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+        .bento-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .bento-desc {
+            color: #555;
+        }
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .footer-col {
+            text-align: left;
+        }
+        .footer-col h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #eab308;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-col ul li a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        .footer-col ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #bbb;
+        }
     </style>
     <script src="three.r134.min.js"></script>
     <script src="vanta.birds.min.js"></script>
 </head>
-<body class="bg-gray-50">
-    <!-- WhatsApp Floating Button -->
-    <div class="whatsapp-float">
-        <a href="https://wa.me/919841210077" class="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition duration-300" aria-label="Chat on WhatsApp">
-            <i class="fab fa-whatsapp text-2xl"></i>
-        </a>
-    </div>
+<body>
+    <!-- HEADER (NAVIGATION) -->
+    <header class="header" style="padding-bottom:0.5rem;">
+        <div class="logo" style="margin-bottom:0.5rem;">
+            <span><i class="fas fa-shield-alt"></i></span> M. Asokan
+        </div>
+        <div class="subtitle">LIC Insurance Advisor, Chennai</div>
+        <nav class="navbar" style="margin:1.5rem 0 0.5rem 0;">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#why-lic" class="nav-link">Why LIC?</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#policy-help" class="nav-link">Policy Help</a>
+            <a href="#financial-guidance" class="nav-link">Financial Guidance</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="cta-group" style="margin-bottom:1.5rem;">
+            <a href="tel:9841210077" class="cta-btn">Call Now</a>
+            <a href="#contact" class="cta-btn" style="background:#eab308;color:#222;">Request Callback</a>
+        </div>
+        <button id="languageToggle" class="language-switcher" style="margin-bottom:2.5rem;">தமிழ் <i class="fas fa-exchange-alt" style="margin-left:0.5rem;"></i></button>
+    </header>
 
-    <!-- Language Switcher -->
-    <div class="fixed top-20 right-4 z-50">
-        <button id="languageToggle" class="language-switcher bg-licGold text-black px-4 py-2 rounded-full shadow-md flex items-center">
-            <span id="currentLanguage">தமிழ்</span>
-            <i class="fas fa-exchange-alt ml-2"></i>
-        </button>
-    </div>
+    <!-- HERO SECTION -->
+    <section class="hero-bg">
+        <h2 class="section-title">Home</h2>
+        <h1 data-en="Your Trusted LIC Advisor for Financial Security and Policy Support" data-ta="நிதி பாதுகாப்பு மற்றும் பாலிசி ஆதரவுக்கான உங்கள் நம்பிக்கையான LIC ஆலோசகர்">Your Trusted LIC Advisor for Financial Security and Policy Support</h1>
+        <p data-en="68 years of trust | ₹2.2L Cr premium | 69.91% market share" data-ta="68 ஆண்டுகள் நம்பிக்கை | ₹2.2 லட்சம் கோடி பிரீமியம் | 69.91% சந்தை பங்கு">68 years of trust | ₹2.2L Cr premium | 69.91% market share</p>
+        <div class="cta-group">
+            <a href="tel:9841210077" class="cta-btn"><i class="fas fa-phone-alt" style="margin-right:0.5rem;"></i><span data-en="Call Now" data-ta="இப்போது அழைக்கவும்">Call Now</span></a>
+            <a href="#contact" class="cta-btn" style="background:#eab308;color:#222;"><i class="fas fa-headset" style="margin-right:0.5rem;"></i><span data-en="Request Callback" data-ta="கால்பேக் கோருக">Request Callback</span></a>
+        </div>
+    </section>
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-40">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <div class="bg-licBlue text-white p-2 rounded-full mr-3">
-                        <i class="fas fa-shield-alt text-xl"></i>
-                    </div>
-                    <a href="#" class="text-xl font-bold text-licBlue">M. Asokan</a>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-gray-700 hover:text-licBlue transition">About</a>
-                    <a href="#services" class="text-gray-700 hover:text-licBlue transition">Services</a>
-                    <a href="#policy-help" class="text-gray-700 hover:text-licBlue transition">Policy Help</a>
-                    <a href="#contact" class="text-gray-700 hover:text-licBlue transition">Contact</a>
-                </div>
-                <button class="md:hidden focus:outline-none" id="mobileMenuButton">
-                    <i class="fas fa-bars text-2xl text-gray-700"></i>
-                </button>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="card" style="max-width:900px;margin:2rem auto;">
+        <h2 class="section-title">About</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;">
+            <div style="flex:1 1 220px;display:flex;justify-content:center;">
+                <img src="WhatsApp Image 2025-05-19 at 19.23.21_17d24523.jpg" alt="M. Asokan, LIC advisor" style="width:220px;height:220px;border-radius:50%;object-fit:cover;border:4px solid #0056b3;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white w-full py-2 px-4 shadow-lg" id="mobileMenu">
-            <a href="#about" class="block py-2 text-gray-700 hover:text-licBlue transition">About</a>
-            <a href="#services" class="block py-2 text-gray-700 hover:text-licBlue transition">Services</a>
-            <a href="#policy-help" class="block py-2 text-gray-700 hover:text-licBlue transition">Policy Help</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-licBlue transition">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero-bg text-white py-20 md:py-32">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-3xl md:text-5xl font-bold mb-6" data-en="Your Trusted LIC Advisor for Financial Security and Policy Support" data-ta="நிதி பாதுகாப்பு மற்றும் பாலிசி ஆதரவுக்கான உங்கள் நம்பிக்கையான LIC ஆலோசகர்">Your Trusted LIC Advisor for Financial Security and Policy Support</h1>
-            <p class="text-xl md:text-2xl mb-8" data-en="68 years of trust | ₹2.2L Cr premium | 69.91% market share" data-ta="68 ஆண்டுகள் நம்பிக்கை | ₹2.2 லட்சம் கோடி பிரீமியம் | 69.91% சந்தை பங்கு">68 years of trust | ₹2.2L Cr premium | 69.91% market share</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:9841210077" class="bg-white text-licBlue font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300 flex items-center justify-center">
-                    <i class="fas fa-phone-alt mr-2"></i>
-                    <span data-en="Call Now" data-ta="இப்போது அழைக்கவும்">Call Now</span>
-                </a>
-                <a href="#contact" class="bg-licGold text-gray-800 font-bold py-3 px-6 rounded-full hover:bg-yellow-500 transition duration-300 flex items-center justify-center">
-                    <i class="fas fa-headset mr-2"></i>
-                    <span data-en="Request Callback" data-ta="கால்பேக் கோருக">Request Callback</span>
-                </a>
+            <div style="flex:2 1 320px;">
+                <h2 data-en="About Your LIC Advisor" data-ta="உங்கள் LIC ஆலோசகர் பற்றி">About Your LIC Advisor</h2>
+                <h3 data-en="M. Asokan" data-ta="எம். அசோகன்">M. Asokan</h3>
+                <p data-en="Licensed LIC Insurance Advisor with over 30 years of experience helping families in Chennai secure their financial future through comprehensive insurance solutions and policy support." data-ta="15 ஆண்டுகளுக்கும் மேலான அனுபவம் கொண்ட உரிமம் பெற்ற LIC காப்பீட்டு ஆலோசகர், சென்னையில் உள்ள குடும்பங்களின் நிதி எதிர்காலத்தை விரிவான காப்பீட்டு தீர்வுகள் மற்றும் பாலிசி ஆதரவு மூலம் பாதுகாக்க உதவுகிறார்.">Licensed LIC Insurance Advisor with over 30 years of experience helping families in Chennai secure their financial future through comprehensive insurance solutions and policy support.</p>
+                <ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.5rem;">
+                    <li><i class="fas fa-id-card-alt text-licBlue"></i> <span data-en="LIC Insurance Advisor" data-ta="LIC காப்பீட்டு ஆலோசகர்">LIC Insurance Advisor</span></li>
+                    <li><i class="fas fa-phone-alt text-licBlue"></i> 9841210077</li>
+                    <li><i class="fas fa-envelope text-licBlue"></i> 2000as208@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt text-licBlue"></i> <span data-en="Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050" data-ta="லைஃப் இன்சூரன்ஸ் கார்ப்பரேஷன் ஆஃப் இந்தியா எண்.101-டி, வன்னியர் தெரு, பாடி, சென்னை – 600050">Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050</span></li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-licBlue" data-en="About Your LIC Advisor" data-ta="உங்கள் LIC ஆலோசகர் பற்றி">About Your LIC Advisor</h2>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="md:w-1/3 flex justify-center">
-                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-licBlue shadow-lg">
-                        <img src="WhatsApp Image 2025-05-19 at 19.23.21_17d24523.jpg" alt="M. Asokan, LIC advisor, smiling in formal attire, seated in a well-lit office with certificates on the wall, conveying a welcoming and professional atmosphere" class="w-full h-full object-cover object-[center_10%] scale-[1.2]">
-                    </div>
-                </div>
-                <div class="md:w-2/3">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800" data-en="M. Asokan" data-ta="எம். அசோகன்">M. Asokan</h3>
-                    <p class="text-gray-600 mb-6" data-en="Licensed LIC Insurance Advisor with over 30 years of experience helping families in Chennai secure their financial future through comprehensive insurance solutions and policy support." data-ta="15 ஆண்டுகளுக்கும் மேலான அனுபவம் கொண்ட உரிமம் பெற்ற LIC காப்பீட்டு ஆலோசகர், சென்னையில் உள்ள குடும்பங்களின் நிதி எதிர்காலத்தை விரிவான காப்பீட்டு தீர்வுகள் மற்றும் பாலிசி ஆதரவு மூலம் பாதுகாக்க உதவுகிறார்.">Licensed LIC Insurance Advisor with over 30 years of experience helping families in Chennai secure their financial future through comprehensive insurance solutions and policy support.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-id-card-alt text-licBlue text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h4 class="font-semibold" data-en="LIC Insurance Advisor" data-ta="LIC காப்பீட்டு ஆலோசகர்">LIC Insurance Advisor</h4>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-phone-alt text-licBlue text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h4 class="font-semibold">9841210077</h4>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-envelope text-licBlue text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h4 class="font-semibold">2000as208@gmail.com</h4>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-licBlue text-xl mt-1 mr-3"></i>
-                            <div>
-                                <h4 class="font-semibold" data-en="Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050" data-ta="லைஃப் இன்சூரன்ஸ் கார்ப்பரேஷன் ஆஃப் இந்தியா எண்.101-டி, வன்னியர் தெரு, பாடி, சென்னை – 600050">Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- WHY LIC SECTION -->
+    <section class="bento-grid" style="border-top:2px solid #eab308;border-bottom:2px solid #eab308;padding-top:2.5rem;padding-bottom:2.5rem;">
+        <h2 class="section-title" style="grid-column:1/-1;">Why LIC?</h2>
+        <div class="bento-card" style="text-align:center;align-items:center;">
+            <span class="icon"><i class="fas fa-calendar-check"></i></span>
+            <div class="bento-title" data-en="68 Years" data-ta="68 ஆண்டுகள்"><span class="count-up" data-target="68" data-decimal="0">0</span> Years</div>
+            <div class="bento-desc" data-en="of trust and reliability" data-ta="நம்பிக்கை மற்றும் நம்பகத்தன்மை">of trust and reliability</div>
+        </div>
+        <div class="bento-card" style="text-align:center;align-items:center;">
+            <span class="icon"><i class="fas fa-rupee-sign"></i></span>
+            <div class="bento-title" data-en="₹2.22 Lakh Cr" data-ta="₹2.22 லட்சம் கோடி">₹<span class="count-up" data-target="2.22" data-decimal="2">0</span> Lakh Cr</div>
+            <div class="bento-desc" data-en="premium income" data-ta="பிரீமியம் வருமானம்">premium income</div>
+        </div>
+        <div class="bento-card" style="text-align:center;align-items:center;">
+            <span class="icon"><i class="fas fa-file-contract"></i></span>
+            <div class="bento-title" data-en="2.04 Cr+ Policies" data-ta="2.04 கோடி+ பாலிசிகள்"><span class="count-up" data-target="2.04" data-decimal="2">0</span> Cr+ Policies</div>
+            <div class="bento-desc" data-en="issued" data-ta="வழங்கப்பட்டது">issued</div>
+        </div>
+        <div class="bento-card" style="text-align:center;align-items:center;">
+            <span class="icon"><i class="fas fa-chart-pie"></i></span>
+            <div class="bento-title" data-en="69.91% Market Share" data-ta="69.91% சந்தை பங்கு"><span class="count-up" data-target="69.91" data-decimal="2">0</span>% Market Share</div>
+            <div class="bento-desc" data-en="(2023–24)" data-ta="(2023–24)">(2023–24)</div>
         </div>
     </section>
-                   
-
-        
-    <!-- Why LIC Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-licBlue" data-en="Why Choose LIC?" data-ta="ஏன் LIC ஐ தேர்வு செய்ய வேண்டும்?">Why Choose LIC?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="bg-licBlue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-calendar-check text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2" data-en="68 Years" data-ta="68 ஆண்டுகள்">
-                        <span class="count-up" data-target="68" data-decimal="0">0</span> Years
-                    </h3>
-                    <p class="text-gray-600" data-en="of trust and reliability" data-ta="நம்பிக்கை மற்றும் நம்பகத்தன்மை">of trust and reliability</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="bg-licBlue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-rupee-sign text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2" data-en="₹2.22 Lakh Cr" data-ta="₹2.22 லட்சம் கோடி">₹<span class="count-up" data-target="2.22" data-decimal="2">0</span> Lakh Cr</h3>
-                    <p class="text-gray-600" data-en="premium income" data-ta="பிரீமியம் வருமானம்">premium income</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="bg-licBlue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-file-contract text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2" data-en="2.04 Cr+ Policies" data-ta="2.04 கோடி+ பாலிசிகள்"><span class="count-up" data-target="2.04" data-decimal="2">0</span> Cr+ Policies</h3>
-                    <p class="text-gray-600" data-en="issued" data-ta="வழங்கப்பட்டது">issued</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="bg-licBlue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-chart-pie text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2" data-en="69.91% Market Share" data-ta="69.91% சந்தை பங்கு"><span class="count-up" data-target="69.91" data-decimal="2">0</span>% Market Share</h3>
-                    <p class="text-gray-600" data-en="(2023–24)" data-ta="(2023–24)">(2023–24)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <script src="countup.js"></script>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-licBlue" data-en="Insurance & Financial Services" data-ta="காப்பீடு & நிதி சேவைகள்">Insurance & Financial Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card bg-gray-50 p-6 rounded-lg border border-gray-200 transition duration-300">
-                    <div class="bg-licBlue text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="Term Insurance" data-ta="கால காப்பீடு">Term Insurance</h3>
-                    <p class="text-gray-600" data-en="Pure protection plans offering high coverage at affordable premiums" data-ta="மலிவு பிரீமியத்தில் அதிக கவரேஜ் வழங்கும் தூய பாதுகாப்பு திட்டங்கள்">Pure protection plans offering high coverage at affordable premiums</p>
-                </div>
-                <div class="service-card bg-gray-50 p-6 rounded-lg border border-gray-200 transition duration-300">
-                    <div class="bg-licBlue text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-piggy-bank"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="Endowment Plans" data-ta="எண்டவ்மெண்ட் திட்டங்கள்">Endowment Plans</h3>
-                    <p class="text-gray-600" data-en="Combination of protection and savings with guaranteed returns" data-ta="உத்தரவாதமான வருமானத்துடன் பாதுகாப்பு மற்றும் சேமிப்பின் கலவை">Combination of protection and savings with guaranteed returns</p>
-                </div>
-                <div class="service-card bg-gray-50 p-6 rounded-lg border border-gray-200 transition duration-300">
-                    <div class="bg-licBlue text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-hand-holding-usd"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="Money-back Plans" data-ta="பணத் திருப்பித் திட்டங்கள்">Money-back Plans</h3>
-                    <p class="text-gray-600" data-en="Receive periodic payments during policy term with life cover" data-ta="வாழ்நாள் கவரேஜுடன் கால அளவில் குறிப்பிட்ட இடைவெளியில் தொகை பெறுதல்">Receive periodic payments during policy term with life cover</p>
-                </div>
-                <div class="service-card bg-gray-50 p-6 rounded-lg border border-gray-200 transition duration-300">
-                    <div class="bg-licBlue text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-umbrella-beach"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="Retirement & Pension" data-ta="ஓய்வூதியம் & பென்ஷன்">Retirement & Pension</h3>
-                    <p class="text-gray-600" data-en="Secure your golden years with regular income after retirement" data-ta="ஓய்வு பெற்ற பிறகு வழக்கமான வருமானத்துடன் உங்கள் பொற்காலத்தை பாதுகாக்கவும்">Secure your golden years with regular income after retirement</p>
-                </div>
-                <div class="service-card bg-gray-50 p-6 rounded-lg border border-gray-200 transition duration-300">
-                    <div class="bg-licBlue text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="Children's Education" data-ta="குழந்தைகளின் கல்வி">Children's Education</h3>
-                    <p class="text-gray-600" data-en="Ensure funds for your child's education regardless of circumstances" data-ta="சூழ்நிலைகள் எப்படி இருந்தாலும் உங்கள் குழந்தையின் கல்விக்கான நிதியை உறுதி செய்யுங்கள்">Ensure funds for your child's education regardless of circumstances</p>
-                </div>
-                <div class="service-card bg-gray-50 p-6 rounded-lg border border-gray-200 transition duration-300">
-                    <div class="bg-licBlue text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="Wealth Creation" data-ta="செல்வம் உருவாக்கம்">Wealth Creation</h3>
-                    <p class="text-gray-600" data-en="Long-term investment strategies for financial growth and security" data-ta="நிதி வளர்ச்சி மற்றும் பாதுகாப்புக்கான நீண்ட கால முதலீட்டு உத்திகள்">Long-term investment strategies for financial growth and security</p>
-                </div>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="bento-grid" style="border-top:2px solid #eab308;border-bottom:2px solid #eab308;padding-top:2.5rem;padding-bottom:2.5rem;">
+        <h2 class="section-title" style="grid-column:1/-1;">Insurance & Financial Services</h2>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-user-shield"></i></span>
+            <div class="bento-title" data-en="Term Insurance" data-ta="கால காப்பீடு">Term Insurance</div>
+            <div class="bento-desc" data-en="Pure protection plans offering high coverage at affordable premiums" data-ta="மலிவு பிரீமியத்தில் அதிக கவரேஜ் வழங்கும் தூய பாதுகாப்பு திட்டங்கள்">Pure protection plans offering high coverage at affordable premiums</div>
+        </div>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-piggy-bank"></i></span>
+            <div class="bento-title" data-en="Endowment Plans" data-ta="எண்டவ்மெண்ட் திட்டங்கள்">Endowment Plans</div>
+            <div class="bento-desc" data-en="Combination of protection and savings with guaranteed returns" data-ta="உத்தரவாதமான வருமானத்துடன் பாதுகாப்பு மற்றும் சேமிப்பின் கலவை">Combination of protection and savings with guaranteed returns</div>
+        </div>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-hand-holding-usd"></i></span>
+            <div class="bento-title" data-en="Money-back Plans" data-ta="பணத் திருப்பித் திட்டங்கள்">Money-back Plans</div>
+            <div class="bento-desc" data-en="Receive periodic payments during policy term with life cover" data-ta="வாழ்நாள் கவரேஜுடன் கால அளவில் குறிப்பிட்ட இடைவெளியில் தொகை பெறுதல்">Receive periodic payments during policy term with life cover</div>
+        </div>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-umbrella-beach"></i></span>
+            <div class="bento-title" data-en="Retirement & Pension" data-ta="ஓய்வூதியம் & பென்ஷன்">Retirement & Pension</div>
+            <div class="bento-desc" data-en="Secure your golden years with regular income after retirement" data-ta="ஓய்வு பெற்ற பிறகு வழக்கமான வருமானத்துடன் உங்கள் பொற்காலத்தை பாதுகாக்கவும்">Secure your golden years with regular income after retirement</div>
+        </div>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+            <div class="bento-title" data-en="Children's Education" data-ta="குழந்தைகளின் கல்வி">Children's Education</div>
+            <div class="bento-desc" data-en="Ensure funds for your child's education regardless of circumstances" data-ta="சூழ்நிலைகள் எப்படி இருந்தாலும் உங்கள் குழந்தையின் கல்விக்கான நிதியை உறுதி செய்யுங்கள்">Ensure funds for your child's education regardless of circumstances</div>
+        </div>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-chart-line"></i></span>
+            <div class="bento-title" data-en="Wealth Creation" data-ta="செல்வம் உருவாக்கம்">Wealth Creation</div>
+            <div class="bento-desc" data-en="Long-term investment strategies for financial growth and security" data-ta="நிதி வளர்ச்சி மற்றும் பாதுகாப்புக்கான நீண்ட கால முதலீட்டு உத்திகள்">Long-term investment strategies for financial growth and security</div>
+        </div>
+    </section>
+
+    <!-- POLICY SERVICING SECTION -->
+    <section id="policy-help" class="card" style="max-width:900px;margin:2rem auto;border-top:2px solid #eab308;border-bottom:2px solid #eab308;">
+        <h2 class="section-title">Policy Servicing</h2>
+        <h2 data-en="Free Policy Servicing Assistance" data-ta="இலவச பாலிசி சேவை உதவி">Free Policy Servicing Assistance</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
+            <div><b data-en="New Policy Enrollment" data-ta="புதிய பாலிசி பதிவு">New Policy Enrollment</b><br><span data-en="Guidance through entire process" data-ta="முழு செயல்முறையிலும் வழிகாட்டுதல்">Guidance through entire process</span></div>
+            <div><b data-en="Maturity Claims" data-ta="முதிர்ச்சி கோரிக்கைகள்">Maturity Claims</b><br><span data-en="Help with documentation and processing" data-ta="ஆவணப்படுத்தல் மற்றும் செயலாக்கத்தில் உதவி">Help with documentation and processing</span></div>
+            <div><b data-en="Branch Transfers" data-ta="கிளை மாற்றங்கள்">Branch Transfers</b><br><span data-en="Assistance with policy transfers" data-ta="பாலிசி மாற்றங்களில் உதவி">Assistance with policy transfers</span></div>
+            <div><b data-en="Policy Revival" data-ta="பாலிசி மீட்டெடுப்பு">Policy Revival</b><br><span data-en="Revive lapsed policies" data-ta="காலாவதியான பாலிசிகளை மீட்டெடுக்கவும்">Revive lapsed policies</span></div>
+            <div><b data-en="Loan Assistance" data-ta="கடன் உதவி">Loan Assistance</b><br><span data-en="Help with policy loans" data-ta="பாலிசி கடன்களில் உதவி">Help with policy loans</span></div>
+            <div><b data-en="Renewal Payments" data-ta="புதுப்பித்தல் கொடுப்பனவுகள்">Renewal Payments</b><br><span data-en="Reminders and payment assistance" data-ta="நினைவூட்டல்கள் மற்றும் கொடுப்பனவு உதவி">Reminders and payment assistance</span></div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+            <a href="#contact" class="cta-btn"><i class="fas fa-file-alt" style="margin-right:0.5rem;"></i><span data-en="Request Servicing Help" data-ta="சேவை உதவி கோருக">Request Servicing Help</span></a>
+        </div>
+    </section>
+
+    <!-- FINANCIAL GUIDANCE SECTION -->
+    <section class="bento-grid" style="border-top:2px solid #eab308;border-bottom:2px solid #eab308;padding-top:2.5rem;padding-bottom:2.5rem;">
+        <h2 class="section-title" style="grid-column:1/-1;">Financial Guidance</h2>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-tint"></i></span>
+            <div class="bento-title" data-en="Money is Like Water" data-ta="பணம் தண்ணீர் போன்றது">Money is Like Water</div>
+            <div class="bento-desc" data-en="Just as water flows away if not stored properly, money needs financial dams in the form of insurance and investments to create security and wealth." data-ta="தண்ணீர் சரியாக சேமிக்கப்படாவிட்டால் வெளியேறுவது போல, பணத்திற்கும் பாதுகாப்பு மற்றும் செல்வத்தை உருவாக்க காப்பீடு மற்றும் முதலீடுகள் வடிவில் நிதி அணைகள் தேவை.">Just as water flows away if not stored properly, money needs financial dams in the form of insurance and investments to create security and wealth.</div>
+            <div class="text-licBlue font-semibold" data-en="Build Your Financial Dams Today" data-ta="இன்றே உங்கள் நிதி அணைகளை உருவாக்குங்கள்">Build Your Financial Dams Today</div>
+        </div>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-child"></i></span>
+            <div class="bento-title" data-en="LIC as Your Third Child" data-ta="உங்கள் மூன்றாவது குழந்தையாக LIC">LIC as Your Third Child</div>
+            <div class="bento-desc" data-en="Just like your children who support you in old age, your LIC policies work silently in the background, growing steadily to provide for your future needs and retirement." data-ta="முதுமையில் உங்களுக்கு ஆதரவாக இருக்கும் உங்கள் குழந்தைகளைப் போலவே, உங்கள் LIC பாலிசிகள் பின்னணியில் அமைதியாக வேலை செய்கின்றன, உங்கள் எதிர்காலத் தேவைகள் மற்றும் ஓய்வூதியத்திற்காக நிலையாக வளர்ந்து கொண்டிருக்கின்றன.">Just like your children who support you in old age, your LIC policies work silently in the background, growing steadily to provide for your future needs and retirement.</div>
+            <div class="text-licBlue font-semibold" data-en="Nurture Your Financial Child" data-ta="உங்கள் நிதி குழந்தையை வளர்க்கவும்">Nurture Your Financial Child</div>
+        </div>
+        <div class="bento-card">
+            <span class="icon"><i class="fas fa-heartbeat"></i></span>
+            <div class="bento-title" data-en="Don't Postpone Peace of Mind" data-ta="மன அமைதியை தள்ளிப்போடாதீர்கள்">Don't Postpone Peace of Mind</div>
+            <div class="bento-desc" data-en="Financial security is not something to delay. The best time to start was yesterday; the next best time is today. Secure your family's future without waiting for the 'right time' that may never come." data-ta="நிதி பாதுகாப்பு தாமதப்படுத்த வேண்டிய ஒன்று அல்ல. தொடங்க சிறந்த நேரம் நேற்று; அடுத்த சிறந்த நேரம் இன்று. ஒருபோதும் வராமல் போகக்கூடிய 'சரியான நேரத்திற்காக' காத்திராமல் உங்கள் குடும்பத்தின் எதிர்காலத்தைப் பாதுகாக்கவும்.">Financial security is not something to delay. The best time to start was yesterday; the next best time is today. Secure your family's future without waiting for the 'right time' that may never come.</div>
+            <div class="text-licBlue font-semibold" data-en="Act Now for a Secure Tomorrow" data-ta="பாதுகாப்பான நாளைக்காக இப்போதே செயல்படுங்கள்">Act Now for a Secure Tomorrow</div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="card" style="max-width:900px;margin:2rem auto;text-align:center;background:#0056b3;color:#fff;border-top:2px solid #eab308;border-bottom:2px solid #eab308;">
+        <h2 class="section-title">Free LIC Services</h2>
+        <p style="font-size:1.2rem;max-width:600px;margin:0 auto 2rem auto;" data-en="As your LIC advisor, all policy servicing assistance is completely free of cost. I'm here to help you navigate your insurance needs." data-ta="உங்கள் LIC ஆலோசகராக, அனைத்து பாலிசி சேவை உதவிகளும் முற்றிலும் இலவசம். உங்கள் காப்பீட்டு தேவைகளை நிர்வகிக்க நான் இங்கே இருக்கிறேன்.">As your LIC advisor, all policy servicing assistance is completely free of cost. I'm here to help you navigate your insurance needs.</p>
+        <div class="cta-group" style="justify-content:center;">
+            <a href="tel:9841210077" class="cta-btn"><i class="fas fa-phone-alt" style="margin-right:0.5rem;"></i><span data-en="Call for Assistance" data-ta="உதவிக்கு அழைக்கவும்">Call for Assistance</span></a>
+            <a href="https://wa.me/919841210077" class="cta-btn" style="background:#25d366;color:#fff;"><i class="fab fa-whatsapp" style="margin-right:0.5rem;"></i><span data-en="Chat on WhatsApp" data-ta="WhatsApp இல் அரட்டையடிக்கவும்">Chat on WhatsApp</span></a>
+        </div>
+        <div style="margin-top:2rem;background:#fff;color:#0056b3;padding:1rem 2rem;border-radius:1rem;display:inline-block;">
+            <b data-en="Give a missed call to 9841210077 and we will call you back" data-ta="9841210077 என்ற எண்ணுக்கு ஒரு மிஸ் கால் கொடுங்கள், நாங்கள் உங்களுக்கு திரும்ப அழைப்போம்">Give a missed call to 9841210077 and we will call you back</b>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="card" style="max-width:900px;margin:2rem auto;border-top:2px solid #eab308;border-bottom:2px solid #eab308;">
+        <h2 class="section-title">Contact</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:2rem;">
+            <div style="flex:1 1 320px;background:#f8fafc;padding:1.5rem;border-radius:1rem;">
+                <h3 data-en="Send a Message" data-ta="ஒரு செய்தியை அனுப்பவும்">Send a Message</h3>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" data-en-placeholder="Your Name" data-ta-placeholder="உங்கள் பெயர்" required>
+                    <input type="tel" id="phone" placeholder="Phone Number" data-en-placeholder="Phone Number" data-ta-placeholder="தொலைபேசி எண்" required>
+                    <select id="service" required>
+                        <option value="" data-en="Select a service" data-ta="ஒரு சேவையைத் தேர்ந்தெடுக்கவும்">Select a service</option>
+                        <option value="new-policy" data-en="New Policy" data-ta="புதிய பாலிசி">New Policy</option>
+                        <option value="policy-servicing" data-en="Policy Servicing" data-ta="பாலிசி சேவை">Policy Servicing</option>
+                        <option value="claims" data-en="Claims Assistance" data-ta="கோரிக்கை உதவி">Claims Assistance</option>
+                        <option value="financial-planning" data-en="Financial Planning" data-ta="நிதி திட்டமிடல்">Financial Planning</option>
+                        <option value="other" data-en="Other Inquiry" data-ta="பிற விசாரணை">Other Inquiry</option>
+                    </select>
+                    <textarea id="message" rows="3" placeholder="Message (Optional)" data-en-placeholder="Message (Optional)" data-ta-placeholder="செய்தி (விரும்பினால்)"></textarea>
+                    <button type="submit" class="cta-btn" style="width:100%;margin-top:1rem;"><i class="fas fa-paper-plane" style="margin-right:0.5rem;"></i><span data-en="Submit Request" data-ta="கோரிக்கையை சமர்ப்பிக்கவும்">Submit Request</span></button>
+                </form>
+            </div>
+            <div style="flex:1 1 320px;background:#f8fafc;padding:1.5rem;border-radius:1rem;">
+                <h3 data-en="Contact Information" data-ta="தொடர்பு தகவல்">Contact Information</h3>
+                <div style="margin-bottom:1rem;"><i class="fas fa-phone-alt text-licBlue"></i> 9841210077</div>
+                <div style="margin-bottom:1rem;"><i class="fas fa-envelope text-licBlue"></i> 2000as208@gmail.com</div>
+                <div style="margin-bottom:1rem;"><i class="fas fa-map-marker-alt text-licBlue"></i> <span data-en="Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050" data-ta="லைஃப் இன்சூரன்ஸ் கார்ப்பரேஷன் ஆஃப் இந்தியா எண்.101-டி, வன்னியர் தெரு, பாடி, சென்னை – 600050">Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050</span></div>
+                <h3 data-en="Office Location" data-ta="அலுவலக இடம்">Office Location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.008185220926!2d80.18738931482296!3d13.0988909907867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526434b3f9d0d1%3A0x6b6c6a1c1a1a1a!2sLife%20Insurance%20Corporation%20of%20India%2C%20No.101-D%2C%20Vanniyer%20Street%2C%20Padi%2C%20Chennai%20%E2%80%93%20600050!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="180" style="border:0;border-radius:0.7rem;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Policy Servicing Section -->
-    <section id="policy-help" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-licBlue" data-en="Free Policy Servicing Assistance" data-ta="இலவச பாலிசி சேவை உதவி">Free Policy Servicing Assistance</h2>
-            <div class="bg-white rounded-lg shadow-md p-6 md:p-8 max-w-4xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="flex items-start">
-                        <div class="bg-licBlue text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                            <i class="fas fa-check text-sm"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold" data-en="New Policy Enrollment" data-ta="புதிய பாலிசி பதிவு">New Policy Enrollment</h3>
-                            <p class="text-gray-600 text-sm" data-en="Guidance through entire process" data-ta="முழு செயல்முறையிலும் வழிகாட்டுதல்">Guidance through entire process</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-licBlue text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                            <i class="fas fa-check text-sm"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold" data-en="Maturity Claims" data-ta="முதிர்ச்சி கோரிக்கைகள்">Maturity Claims</h3>
-                            <p class="text-gray-600 text-sm" data-en="Help with documentation and processing" data-ta="ஆவணப்படுத்தல் மற்றும் செயலாக்கத்தில் உதவி">Help with documentation and processing</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-licBlue text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                            <i class="fas fa-check text-sm"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold" data-en="Branch Transfers" data-ta="கிளை மாற்றங்கள்">Branch Transfers</h3>
-                            <p class="text-gray-600 text-sm" data-en="Assistance with policy transfers" data-ta="பாலிசி மாற்றங்களில் உதவி">Assistance with policy transfers</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-licBlue text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                            <i class="fas fa-check text-sm"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold" data-en="Policy Revival" data-ta="பாலிசி மீட்டெடுப்பு">Policy Revival</h3>
-                            <p class="text-gray-600 text-sm" data-en="Revive lapsed policies" data-ta="காலாவதியான பாலிசிகளை மீட்டெடுக்கவும்">Revive lapsed policies</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-licBlue text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                            <i class="fas fa-check text-sm"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold" data-en="Loan Assistance" data-ta="கடன் உதவி">Loan Assistance</h3>
-                            <p class="text-gray-600 text-sm" data-en="Help with policy loans" data-ta="பாலிசி கடன்களில் உதவி">Help with policy loans</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-licBlue text-white rounded-full w-8 h-8 flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                            <i class="fas fa-check text-sm"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold" data-en="Renewal Payments" data-ta="புதுப்பித்தல் கொடுப்பனவுகள்">Renewal Payments</h3>
-                            <p class="text-gray-600 text-sm" data-en="Reminders and payment assistance" data-ta="நினைவூட்டல்கள் மற்றும் கொடுப்பனவு உதவி">Reminders and payment assistance</p>
-                        </div>
-                    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>M. Asokan</h3>
+                <p>Your trusted LIC Insurance Advisor in Chennai providing comprehensive insurance solutions and policy support.</p>
+                <div style="margin-top:1rem;">
+                    <a href="https://wa.me/919841210077" style="margin-right:1rem;"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:9841210077" style="margin-right:1rem;"><i class="fas fa-phone-alt"></i></a>
+                    <a href="mailto:2000as208@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
-                <div class="mt-8 text-center">
-                    <a href="#contact" class="bg-licBlue text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300 inline-flex items-center">
-                        <i class="fas fa-file-alt mr-2"></i>
-                        <span data-en="Request Servicing Help" data-ta="சேவை உதவி கோருக">Request Servicing Help</span>
-                    </a>
-                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#policy-help">Policy Help</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Term Insurance</a></li>
+                    <li><a href="#">Endowment Plans</a></li>
+                    <li><a href="#">Retirement Plans</a></li>
+                    <li><a href="#">Policy Servicing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <address style="font-style:normal;">
+                    <div><i class="fas fa-map-marker-alt"></i> Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050</div>
+                    <div style="margin:0.5rem 0;"><i class="fas fa-phone-alt"></i> 9841210077</div>
+                    <div><i class="fas fa-envelope"></i> 2000as208@gmail.com</div>
+                </address>
             </div>
         </div>
-    </section>
-
-    <!-- Financial Guidance Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-licBlue" data-en="Financial Guidance" data-ta="நிதி வழிகாட்டுதல்">Financial Guidance</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <div class="bg-licBlue text-white rounded-lg p-4 mb-4">
-                        <i class="fas fa-tint text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="Money is Like Water" data-ta="பணம் தண்ணீர் போன்றது">Money is Like Water</h3>
-                    <p class="text-gray-600 mb-4" data-en="Just as water flows away if not stored properly, money needs financial dams in the form of insurance and investments to create security and wealth." data-ta="தண்ணீர் சரியாக சேமிக்கப்படாவிட்டால் வெளியேறுவது போல, பணத்திற்கும் பாதுகாப்பு மற்றும் செல்வத்தை உருவாக்க காப்பீடு மற்றும் முதலீடுகள் வடிவில் நிதி அணைகள் தேவை.">Just as water flows away if not stored properly, money needs financial dams in the form of insurance and investments to create security and wealth.</p>
-                    <div class="text-licBlue font-semibold" data-en="Build Your Financial Dams Today" data-ta="இன்றே உங்கள் நிதி அணைகளை உருவாக்குங்கள்">Build Your Financial Dams Today</div>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <div class="bg-licBlue text-white rounded-lg p-4 mb-4">
-                        <i class="fas fa-child text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="LIC as Your Third Child" data-ta="உங்கள் மூன்றாவது குழந்தையாக LIC">LIC as Your Third Child</h3>
-                    <p class="text-gray-600 mb-4" data-en="Just like your children who support you in old age, your LIC policies work silently in the background, growing steadily to provide for your future needs and retirement." data-ta="முதுமையில் உங்களுக்கு ஆதரவாக இருக்கும் உங்கள் குழந்தைகளைப் போலவே, உங்கள் LIC பாலிசிகள் பின்னணியில் அமைதியாக வேலை செய்கின்றன, உங்கள் எதிர்காலத் தேவைகள் மற்றும் ஓய்வூதியத்திற்காக நிலையாக வளர்ந்து கொண்டிருக்கின்றன.">Just like your children who support you in old age, your LIC policies work silently in the background, growing steadily to provide for your future needs and retirement.</p>
-                    <div class="text-licBlue font-semibold" data-en="Nurture Your Financial Child" data-ta="உங்கள் நிதி குழந்தையை வளர்க்கவும்">Nurture Your Financial Child</div>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <div class="bg-licBlue text-white rounded-lg p-4 mb-4">
-                        <i class="fas fa-heartbeat text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3" data-en="Don't Postpone Peace of Mind" data-ta="மன அமைதியை தள்ளிப்போடாதீர்கள்">Don't Postpone Peace of Mind</h3>
-                    <p class="text-gray-600 mb-4" data-en="Financial security is not something to delay. The best time to start was yesterday; the next best time is today. Secure your family's future without waiting for the 'right time' that may never come." data-ta="நிதி பாதுகாப்பு தாமதப்படுத்த வேண்டிய ஒன்று அல்ல. தொடங்க சிறந்த நேரம் நேற்று; அடுத்த சிறந்த நேரம் இன்று. ஒருபோதும் வராமல் போகக்கூடிய 'சரியான நேரத்திற்காக' காத்திராமல் உங்கள் குடும்பத்தின் எதிர்காலத்தைப் பாதுகாக்கவும்.">Financial security is not something to delay. The best time to start was yesterday; the next best time is today. Secure your family's future without waiting for the 'right time' that may never come.</p>
-                    <div class="text-licBlue font-semibold" data-en="Act Now for a Secure Tomorrow" data-ta="பாதுகாப்பான நாளைக்காக இப்போதே செயல்படுங்கள்">Act Now for a Secure Tomorrow</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="py-16 bg-licBlue text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6" data-en="Free LIC Services – No Charges" data-ta="இலவச LIC சேவைகள் – எந்த கட்டணமும் இல்லை">Free LIC Services – No Charges</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto" data-en="As your LIC advisor, all policy servicing assistance is completely free of cost. I'm here to help you navigate your insurance needs." data-ta="உங்கள் LIC ஆலோசகராக, அனைத்து பாலிசி சேவை உதவிகளும் முற்றிலும் இலவசம். உங்கள் காப்பீட்டு தேவைகளை நிர்வகிக்க நான் இங்கே இருக்கிறேன்.">As your LIC advisor, all policy servicing assistance is completely free of cost. I'm here to help you navigate your insurance needs.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:9841210077" class="bg-white text-licBlue font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300 flex items-center justify-center">
-                    <i class="fas fa-phone-alt mr-2"></i>
-                    <span data-en="Call for Assistance" data-ta="உதவிக்கு அழைக்கவும்">Call for Assistance</span>
-                </a>
-                <a href="https://wa.me/919841210077" class="bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 transition duration-300 flex items-center justify-center">
-                    <i class="fab fa-whatsapp mr-2"></i>
-                    <span data-en="Chat on WhatsApp" data-ta="WhatsApp இல் அரட்டையடிக்கவும்">Chat on WhatsApp</span>
-                </a>
-            </div>
-            <div class="mt-8 bg-white text-licBlue p-4 rounded-lg inline-block">
-                <p class="font-semibold" data-en="Give a missed call to 9841210077 and we will call you back" data-ta="9841210077 என்ற எண்ணுக்கு ஒரு மிஸ் கால் கொடுங்கள், நாங்கள் உங்களுக்கு திரும்ப அழைப்போம்">Give a missed call to 9841210077 and we will call you back</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-licBlue" data-en="Contact Your LIC Advisor" data-ta="உங்கள் LIC ஆலோசகரைத் தொடர்பு கொள்ளவும்">Contact Your LIC Advisor</h2>
-            <div class="flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-1/2 bg-white p-6 md:p-8 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-800" data-en="Send a Message" data-ta="ஒரு செய்தியை அனுப்பவும்">Send a Message</h3>
-                    <form id="contactForm" class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-gray-700 mb-2" data-en="Your Name" data-ta="உங்கள் பெயர்">Your Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-licBlue">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-gray-700 mb-2" data-en="Phone Number" data-ta="தொலைபேசி எண்">Phone Number</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-licBlue">
-                        </div>
-                        <div>
-                            <label for="service" class="block text-gray-700 mb-2" data-en="Service Required" data-ta="தேவையான சேவை">Service Required</label>
-                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-licBlue">
-                                <option value="" data-en="Select a service" data-ta="ஒரு சேவையைத் தேர்ந்தெடுக்கவும்">Select a service</option>
-                                <option value="new-policy" data-en="New Policy" data-ta="புதிய பாலிசி">New Policy</option>
-                                <option value="policy-servicing" data-en="Policy Servicing" data-ta="பாலிசி சேவை">Policy Servicing</option>
-                                <option value="claims" data-en="Claims Assistance" data-ta="கோரிக்கை உதவி">Claims Assistance</option>
-                                <option value="financial-planning" data-en="Financial Planning" data-ta="நிதி திட்டமிடல்">Financial Planning</option>
-                                <option value="other" data-en="Other Inquiry" data-ta="பிற விசாரணை">Other Inquiry</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 mb-2" data-en="Message (Optional)" data-ta="செய்தி (விரும்பினால்)">Message (Optional)</label>
-                            <textarea id="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-licBlue"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="bg-licBlue text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300 w-full">
-                                <i class="fas fa-paper-plane mr-2"></i>
-                                <span data-en="Submit Request" data-ta="கோரிக்கையை சமர்ப்பிக்கவும்">Submit Request</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="lg:w-1/2 space-y-6">
-                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-                        <h3 class="text-2xl font-semibold mb-4 text-gray-800" data-en="Contact Information" data-ta="தொடர்பு தகவல்">Contact Information</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <div class="bg-licBlue text-white rounded-full w-10 h-10 flex items-center justify-center mt-1 mr-3">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold" data-en="Phone" data-ta="தொலைபேசி">Phone</h4>
-                                    <p class="text-gray-600">9841210077</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-licBlue text-white rounded-full w-10 h-10 flex items-center justify-center mt-1 mr-3">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold" data-en="Email" data-ta="மின்னஞ்சல்">Email</h4>
-                                    <p class="text-gray-600">2000as208@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-licBlue text-white rounded-full w-10 h-10 flex items-center justify-center mt-1 mr-3">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold" data-en="Address" data-ta="முகவரி">Address</h4>
-                                    <p class="text-gray-600" data-en="Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050" data-ta="லைஃப் இன்சூரன்ஸ் கார்ப்பரேஷன் ஆஃப் இந்தியா எண்.101-டி, வன்னியர் தெரு, பாடி, சென்னை – 600050">Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-2xl font-semibold mb-4 text-gray-800" data-en="Office Location" data-ta="அலுவலக இடம்">Office Location</h3>
-                        <div class="aspect-w-16 aspect-h-9">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.008185220926!2d80.18738931482296!3d13.0988909907867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526434b3f9d0d1%3A0x6b6c6a1c1a1a1a1a!2sLife%20Insurance%20Corporation%20of%20India%2C%20No.101-D%2C%20Vanniyer%20Street%2C%20Padi%2C%20Chennai%20%E2%80%93%20600050!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-licGold">M. Asokan</h3>
-                    <p class="mb-4" data-en="Your trusted LIC Insurance Advisor in Chennai providing comprehensive insurance solutions and policy support." data-ta="சென்னையில் உள்ள உங்கள் நம்பிக்கையான LIC காப்பீட்டு ஆலோசகர், விரிவான காப்பீட்டு தீர்வுகள் மற்றும் பாலிசி ஆதரவை வழங்குகிறார்.">Your trusted LIC Insurance Advisor in Chennai providing comprehensive insurance solutions and policy support.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://wa.me/919841210077" class="text-gray-300 hover:text-white transition">
-                            <i class="fab fa-whatsapp text-xl"></i>
-                        </a>
-                        <a href="tel:9841210077" class="text-gray-300 hover:text-white transition">
-                            <i class="fas fa-phone-alt text-xl"></i>
-                        </a>
-                        <a href="mailto:2000as208@gmail.com" class="text-gray-300 hover:text-white transition">
-                            <i class="fas fa-envelope text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-licGold" data-en="Quick Links" data-ta="விரைவு இணைப்புகள்">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="hover:text-licGold transition" data-en="About" data-ta="பற்றி">About</a></li>
-                        <li><a href="#services" class="hover:text-licGold transition" data-en="Services" data-ta="சேவைகள்">Services</a></li>
-                        <li><a href="#policy-help" class="hover:text-licGold transition" data-en="Policy Help" data-ta="பாலிசி உதவி">Policy Help</a></li>
-                        <li><a href="#contact" class="hover:text-licGold transition" data-en="Contact" data-ta="தொடர்பு">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-licGold" data-en="Services" data-ta="சேவைகள்">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-licGold transition" data-en="Term Insurance" data-ta="கால காப்பீடு">Term Insurance</a></li>
-                        <li><a href="#" class="hover:text-licGold transition" data-en="Endowment Plans" data-ta="எண்டவ்மெண்ட் திட்டங்கள்">Endowment Plans</a></li>
-                        <li><a href="#" class="hover:text-licGold transition" data-en="Retirement Plans" data-ta="ஓய்வூதிய திட்டங்கள்">Retirement Plans</a></li>
-                        <li><a href="#" class="hover:text-licGold transition" data-en="Policy Servicing" data-ta="பாலிசி சேவை">Policy Servicing</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-licGold" data-en="Contact" data-ta="தொடர்பு">Contact</h3>
-                    <address class="not-italic">
-                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-licGold"></i> <span data-en="Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050" data-ta="லைஃப் இன்சூரன்ஸ் கார்ப்பரேஷன் ஆஃப் இந்தியா எண்.101-டி, வன்னியர் தெரு, பாடி, சென்னை – 600050">Life Insurance Corporation of India No.101-D, Vanniyer Street, Padi, Chennai – 600050</span></p>
-                        <p class="mb-2"><i class="fas fa-phone-alt mr-2 text-licGold"></i> 9841210077</p>
-                        <p><i class="fas fa-envelope mr-2 text-licGold"></i> 2000as208@gmail.com</p>
-                    </address>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400 text-sm mb-2" data-en="This is an individual advisor website and not an official LIC website." data-ta="இது ஒரு தனிப்பட்ட ஆலோசகர் வலைத்தளம் மற்றும் அதிகாரப்பூர்வ LIC வலைத்தளம் அல்ல.">This is an individual advisor website and not an official LIC website.</p>
-                <p class="text-gray-400 text-sm">&copy; 2025 M. Asokan - LIC Insurance Advisor. <span data-en="All rights reserved." data-ta="அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">All rights reserved.</span></p>
-            </div>
+        <div class="footer-bottom">
+            <div data-en="This is an individual advisor website and not an official LIC website." data-ta="இது ஒரு தனிப்பட்ட ஆலோசகர் வலைத்தளம் மற்றும் அதிகாரப்பூர்வ LIC வலைத்தளம் அல்ல.">This is an individual advisor website and not an official LIC website.</div>
+            <div>&copy; 2025 M. Asokan - LIC Insurance Advisor. <span data-en="All rights reserved." data-ta="அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.">All rights reserved.</span></div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919841210077" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="countup.js"></script>
     <script>
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuButton').addEventListener('click', function() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
+    // Language Toggle
+    const languageToggle = document.getElementById('languageToggle');
+    let isEnglish = false;
+    function switchLanguage() {
+        isEnglish = !isEnglish;
+        languageToggle.innerHTML = isEnglish ? 'English <i class="fas fa-exchange-alt" style="margin-left:0.5rem;"></i>' : 'தமிழ் <i class="fas fa-exchange-alt" style="margin-left:0.5rem;"></i>';
+        const elements = document.querySelectorAll('[data-en], [data-ta]');
+        elements.forEach(element => {
+            if (isEnglish) {
+                if (element.dataset.en) element.textContent = element.dataset.en;
+                if (element.hasAttribute('placeholder') && element.dataset.enPlaceholder) element.placeholder = element.dataset.enPlaceholder;
+            } else {
+                if (element.dataset.ta) element.textContent = element.dataset.ta;
+                if (element.hasAttribute('placeholder') && element.dataset.taPlaceholder) element.placeholder = element.dataset.taPlaceholder;
+            }
         });
+    }
+    languageToggle.addEventListener('click', switchLanguage);
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert(isEnglish ? 'Thank you for your message! We will contact you shortly.' : 'உங்கள் செய்திக்கு நன்றி! நாங்கள் விரைவில் உங்களைத் தொடர்பு கொள்வோம்.');
+        this.reset();
+    });
 
-        // Language Toggle
-        const languageToggle = document.getElementById('languageToggle');
-        const currentLanguage = document.getElementById('currentLanguage');
-        let isEnglish = false;
-
-        // Function to switch language
-        function switchLanguage() {
-            isEnglish = !isEnglish;
-            currentLanguage.textContent = isEnglish ? 'English' : 'தமிழ்';
-            
-            // Get all elements with data-en and data-ta attributes
-            const elements = document.querySelectorAll('[data-en], [data-ta]');
-            
-            elements.forEach(element => {
-                if (isEnglish) {
-                    if (element.dataset.en) {
-                        element.textContent = element.dataset.en;
-                    }
-                    if (element.hasAttribute('placeholder') && element.dataset.enPlaceholder) {
-                        element.placeholder = element.dataset.enPlaceholder;
-                    }
-                } else {
-                    if (element.dataset.ta) {
-                        element.textContent = element.dataset.ta;
-                    }
-                    if (element.hasAttribute('placeholder') && element.dataset.taPlaceholder) {
-                        element.placeholder = element.dataset.taPlaceholder;
-                    }
+    // Smooth scroll for nav and footer section links
+    document.querySelectorAll('a.nav-link, footer a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
-            });
-        }
-
-        // Initialize language
-        switchLanguage();
-        
-        // Toggle language on button click
-        languageToggle.addEventListener('click', switchLanguage);
-
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert(isEnglish ? 'Thank you for your message! We will contact you shortly.' : 'உங்கள் செய்திக்கு நன்றி! நாங்கள் விரைவில் உங்களைத் தொடர்பு கொள்வோம்.');
-            this.reset();
+            }
         });
+    });
     </script>
 </body>
 </html>

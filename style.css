@@ -1,28 +1,510 @@
 body {
-	padding: 2rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+    background: #f8fafc;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Arial', sans-serif;
+    color: #222;
+}
+
+h1, h2, h3, h4 {
+    color: #0056b3;
+    margin-top: 0;
 }
 
 h1 {
-	font-size: 16px;
-	margin-top: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 p {
-	color: rgb(255, 255, 255);
-	font-size: 15px;
-	margin-bottom: 10px;
-	margin-top: 5px;
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
-.card {
-	max-width: 620px;
-	margin: 0 auto;
-	padding: 16px;
-	border: 1px solid lightgray;
-	border-radius: 16px;
+/* Navigation Styles */
+.navbar {
+    background: #0056b3;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    margin-bottom: 0.5rem;
+}
+nav {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2000;
+    margin-left: calc(50% - 50vw);
+    margin-top: 0; /* Ensure no margin above nav */
+}
+nav a {
+    color: #0056b3;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #eab308;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+.nav-link:hover, .nav-link:focus {
+    background: #eab308;
+    color: #222;
+    text-decoration: none;
 }
 
-.card p:last-child {
-	margin-bottom: 0;
+.hero-bg {
+    background: linear-gradient(120deg, #0056b3 60%, #eab308 100%);
+    color: #fff;
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    box-sizing: border-box;
+    max-width: none;
+}
+.hero-bg h1, .hero-bg p {
+    color: #fff;
+}
+.hero-bg .cta-btn {
+    background: #fff;
+    color: #0056b3;
+    border: none;
+    border-radius: 999px;
+    padding: 1rem 2.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.hero-bg .cta-btn:hover {
+    background: #eab308;
+    color: #222;
+}
+.hero-bg .section-title {
+    color: #fff;
+}
+
+/* If you have other blue-background sections, target their .section-title as well */
+
+.card, .service-card, .shadow-md, .rounded-lg {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.service-card {
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+
+.bg-licBlue {
+    background: #0056b3 !important;
+    color: #fff !important;
+}
+.bg-licGold {
+    background: #eab308 !important;
+    color: #222 !important;
+}
+.text-licBlue {
+    color: #0056b3 !important;
+}
+.text-licGold {
+    color: #eab308 !important;
+}
+
+input, select, textarea {
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+    border: 1.5px solid #0056b3;
+    outline: none;
+}
+
+button, .btn {
+    background: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+button:hover, .btn:hover {
+    background: #eab308;
+    color: #222;
+}
+
+.header {
+    background: linear-gradient(120deg, #0056b3 60%, #eab308 100%);
+    color: #fff;
+    padding: 2.5rem 0 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.header .logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+.header .subtitle {
+    font-size: 1.1rem;
+    color: #f3f4f6;
+    margin-bottom: 1.5rem;
+}
+.header .cta-group {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.header .cta-btn {
+    background: #fff;
+    color: #0056b3;
+    border: none;
+    border-radius: 999px;
+    padding: 1rem 2.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.header .cta-btn:hover {
+    background: #eab308;
+    color: #222;
+}
+
+.header nav {
+    margin: 1.5rem 0 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+}
+@media (max-width: 600px) {
+    body {
+        padding-top: 3.2rem;
+    }
+    .navbar {
+        padding: 0.5rem 0.5rem;
+    }
+    .nav-link {
+        margin: 0 0.25rem;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.98rem;
+    }
+    nav {
+        padding: 0.7rem 0;
+    }
+    .header {
+        padding: 1.2rem 0 1rem 0;
+    }
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+.bento-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.18s, box-shadow 0.18s;
+    border: 1px solid #e5e7eb;
+    min-height: 220px;
+}
+.bento-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+.bento-card .icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+}
+.bento-card .bento-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #0056b3;
+}
+.bento-card .bento-desc {
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 3rem 0 1.5rem 0;
+    margin-top: 3rem;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    box-sizing: border-box;
+}
+footer a {
+    color: #eab308;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+footer a:hover {
+    color: #fff;
+}
+.footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1.5rem;
+}
+.footer .footer-col h3 {
+    color: #eab308;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.footer .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer .footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+.footer .footer-col a {
+    color: #eab308;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer .footer-col a:hover {
+    color: #fff;
+}
+.footer .footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: #bbb;
+    font-size: 0.95rem;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: background 0.2s;
+}
+.whatsapp-float:hover {
+    background: #128c7e;
+}
+
+.language-switcher {
+    background: #eab308;
+    color: #222;
+    border: none;
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.language-switcher:hover {
+    background: #0056b3;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Remove max-width and centering for hero-bg only */
+.hero-bg {
+    background: linear-gradient(120deg, #0056b3 60%, #eab308 100%);
+    color: #fff;
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    box-sizing: border-box;
+    max-width: none;
+}
+
+/* Prevent global section, main, .bento-grid, .card from affecting hero-bg */
+main:not(.hero-bg), section:not(.hero-bg), .card:not(.hero-bg), .bento-grid:not(.hero-bg) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+}
+
+@media (max-width: 1200px) {
+    main:not(.hero-bg), section:not(.hero-bg), .card:not(.hero-bg), .bento-grid:not(.hero-bg) {
+        max-width: 98vw;
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .hero-bg {
+        padding: 2.5rem 0 2rem 0;
+    }
+    .card, .service-card, .shadow-md, .rounded-lg {
+        padding: 1.2rem;
+    }
+    .bento-grid {
+        gap: 1.2rem;
+    }
+    .footer .footer-grid {
+        gap: 1.2rem;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .hero-bg {
+        padding: 1.5rem 0 1rem 0;
+    }
+    .card, .service-card, .shadow-md, .rounded-lg {
+        padding: 0.7rem;
+    }
+    .whatsapp-float {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+        bottom: 16px;
+        right: 16px;
+    }
+    .header {
+        padding: 1.2rem 0 1rem 0;
+    }
+    .bento-card {
+        padding: 1rem 0.7rem;
+    }
+    .footer {
+        padding: 1.5rem 0 0.7rem 0;
+    }
+    main, section, .card, .bento-grid {
+        max-width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    section, .card, .bento-grid {
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+/* Ensure section titles in .bg-licBlue and any bento-grid with blue background are white, including 'Free LIC Services' */
+.bg-licBlue .section-title,
+.bento-grid.bg-licBlue .section-title,
+.bento-grid.bg-licBlue h2.section-title,
+.bento-grid[style*='background:#0056b3'] .section-title,
+.bento-grid[style*='background-color:#0056b3'] .section-title,
+.bento-grid[style*='background-color: #0056b3'] .section-title,
+#services.section-blue .section-title,
+#services .section-title,
+#services[style*='background-color: #0056b3'] .section-title,
+#services[style*='background:#0056b3'] .section-title,
+section.card[style*='background:#0056b3'] .section-title,
+section.card[style*='background: #0056b3'] .section-title,
+section.card[style*='background-color:#0056b3'] .section-title,
+section.card[style*='background-color: #0056b3'] .section-title {
+    color: #fff !important;
+}
+.bento-grid#services .section-title,
+#services .section-title {
+    color: #0056b3 !important;
+}
+section.card[style*='background:#0056b3'] p,
+section.card[style*='background: #0056b3'] p,
+section.card[style*='background-color:#0056b3'] p,
+section.card[style*='background-color: #0056b3'] p {
+    color: #e6eaf3 !important;
+}
+
+/* Add a nav-spacer utility to push content below the fixed nav */
+.nav-spacer {
+    height: 4.5rem;
+}
+@media (max-width: 600px) {
+    .nav-spacer {
+        height: 3.2rem;
+    }
 }
